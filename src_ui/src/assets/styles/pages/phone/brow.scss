@@ -1,0 +1,112 @@
+.phone_brow {
+	position: absolute;
+	top: 0.8vh;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 30%;
+	height: 3.2vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.95) 0%, rgba(20, 20, 20, 0.98) 100%);
+	border-radius: 1.8vw;
+	z-index: 15;
+	box-shadow: 
+		0 0.2vw 0.5vw rgba(0, 0, 0, 0.5),
+		inset 0 0.1vw 0.2vw rgba(255, 255, 255, 0.1),
+		inset 0 -0.1vw 0.2vw rgba(0, 0, 0, 0.3);
+
+	// Dynamic Island эффект
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		border-radius: 1.8vw;
+		background: linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 0.4) 0%,
+			rgba(0, 0, 0, 0.6) 50%,
+			rgba(0, 0, 0, 0.8) 100%
+		);
+		pointer-events: none;
+	}
+
+	&-speaker {
+		width: 35%;
+		height: 0.4vh;
+		background: linear-gradient(90deg, 
+			rgba(50, 50, 50, 0.8) 0%,
+			rgba(30, 30, 30, 0.9) 50%,
+			rgba(50, 50, 50, 0.8) 100%
+		);
+		border-radius: 0.2vw;
+		box-shadow: 
+			inset 0 0.05vw 0.1vw rgba(0, 0, 0, 0.5),
+			0 0.05vw 0.1vw rgba(255, 255, 255, 0.1);
+		z-index: 11;
+	}
+
+	&-camera {
+		position: absolute;
+		right: 15%;
+		width: 0.6vw;
+		height: 0.6vw;
+		background: radial-gradient(
+			circle at 30% 30%,
+			rgba(100, 100, 100, 0.3) 0%,
+			rgba(0, 0, 0, 0.9) 70%
+		);
+		border-radius: 50%;
+		box-shadow: 
+			inset 0 0.05vw 0.1vw rgba(0, 0, 0, 0.8),
+			0 0.05vw 0.15vw rgba(0, 0, 0, 0.6),
+			inset 0 -0.05vw 0.1vw rgba(255, 255, 255, 0.1);
+		z-index: 11;
+
+		&:after {
+			@extend %pseudo;
+
+			background: radial-gradient(
+				circle at 30% 30%,
+				rgba(70, 120, 200, 0.6) 0%,
+				rgba(40, 80, 150, 0.8) 50%,
+				rgba(20, 50, 100, 1) 100%
+			);
+			width: 60%;
+			height: 60%;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 50%;
+			box-shadow: 
+				inset 0 0.05vw 0.1vw rgba(0, 0, 0, 0.7),
+				0 0.05vw 0.1vw rgba(0, 0, 0, 0.5);
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.phone_brow {
+		width: 32%;
+		height: 3vh;
+		border-radius: 1.6vw;
+
+		&::before {
+			border-radius: 1.6vw;
+		}
+
+		&-speaker {
+			width: 38%;
+			height: 0.35vh;
+		}
+
+		&-camera {
+			right: 18%;
+			width: 0.55vw;
+			height: 0.55vw;
+		}
+	}
+}

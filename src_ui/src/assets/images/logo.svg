@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      .logo-main { 
+        fill: #fff; 
+        font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif; 
+        font-weight: 900; 
+        font-style: normal;
+        text-transform: uppercase;
+      }
+      .logo-sub { 
+        fill: #ff0082; 
+        font-family: 'Arial Black', Arial, sans-serif; 
+        font-weight: 900;
+        font-size: 14px;
+      }
+    </style>
+  </defs>
+  
+  <!-- Декоративный квадрат (смещён вправо) с "RP" внутри -->
+  <rect x="160" y="74.72" width="39.96" height="39.96" rx="10.24" fill="#fff" opacity="0.25"/>
+  <text x="179.98" y="94.7" class="logo-sub" text-anchor="middle" dominant-baseline="middle" letter-spacing="1">RP</text>
+  
+  <!-- Основной текст "SERVER" -->
+  <text x="100" y="100" class="logo-main" font-size="26" text-anchor="middle" dominant-baseline="middle" letter-spacing="1.5">SERVER</text>
+</svg>

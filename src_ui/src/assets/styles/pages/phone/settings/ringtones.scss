@@ -1,0 +1,96 @@
+// iPhone 15 — Настройки → Звуки → Рингтоны. Inset grouped list.
+
+.settings_ringtones {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding-top: 6vh;
+	background: #0d0d0f;
+
+	&-items {
+		flex: 1;
+		padding: 1.2vh 4%;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	&-group {
+		background: #2c2c2e;
+		border-radius: 0.9vw;
+		overflow: hidden;
+		box-shadow: 0 0.1vw 0.3vw rgba(0, 0, 0, 0.2);
+	}
+
+	&-item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-height: 4.4vh;
+		padding: 0 4%;
+		background: transparent;
+		border-bottom: 0.05vh solid #38383a;
+		cursor: pointer;
+		transition: background 0.15s ease;
+
+		&:last-child {
+			border-bottom: none;
+		}
+
+		&:active {
+			background: rgba(255, 255, 255, 0.06);
+		}
+
+		&-name {
+			font-size: 0.95vw;
+			font-weight: 400;
+			color: #ffffff;
+			letter-spacing: -0.01em;
+		}
+
+		&-right {
+			display: flex;
+			align-items: center;
+			gap: 1.2vw;
+		}
+
+		&-play {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 2.2vw;
+			height: 2.2vw;
+			background: rgba(255, 255, 255, 0.1);
+			border: none;
+			border-radius: 50%;
+			color: #ffffff;
+			cursor: pointer;
+			transition: background 0.15s ease, transform 0.1s ease;
+
+			svg {
+				width: 1.1vw;
+				height: 1.1vw;
+			}
+
+			&:active {
+				transform: scale(0.92);
+				background: rgba(255, 255, 255, 0.15);
+			}
+		}
+
+		&-check {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #0a84ff;
+
+			svg {
+				width: 1.2vw;
+				height: 1.2vw;
+			}
+		}
+	}
+}

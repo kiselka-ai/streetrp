@@ -1,0 +1,101 @@
+// iPhone 15 Pro Max — Редактор контакта (форма, аватар, удаление)
+
+.contacts_editor {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	padding-top: 6vh;
+	background: #0d0d0f;
+
+	.avatar {
+		width: 10vw;
+		height: 10vw;
+		margin: 0 auto 2vh;
+		background: #3a3a3c;
+		border-radius: 50%;
+		font-size: 2.8vw;
+		font-weight: 500;
+		line-height: 2.6;
+		text-align: center;
+		color: #ffffff;
+
+		svg {
+			width: 4vw;
+			height: 4vw;
+			margin: 0 auto;
+			display: block;
+			fill: #8e8e93;
+		}
+	}
+
+	form {
+		padding: 0 4% 2vh;
+		margin-bottom: 0;
+	}
+
+	.phone_items-group {
+		border: none;
+		background: #2c2c2e;
+		border-radius: 0.9vw;
+		overflow: hidden;
+		box-shadow: 0 0.1vw 0.3vw rgba(0, 0, 0, 0.2);
+
+		& > * {
+			position: relative;
+			border: none;
+
+			&::after {
+				display: block;
+				content: '';
+				position: absolute;
+				left: 4%;
+				right: 4%;
+				bottom: 0;
+				height: 0.05vh;
+				background: #38383a;
+				z-index: 1;
+			}
+
+			&:last-of-type::after {
+				display: none;
+			}
+		}
+	}
+
+	.phone_input {
+		border: none;
+		background: transparent;
+
+		input {
+			background: transparent;
+			color: #ffffff;
+			font-size: 0.95vw;
+
+			&::placeholder {
+				color: #8e8e93;
+			}
+		}
+
+		.phone_input-reset {
+			fill: #8e8e93;
+		}
+	}
+
+	.phone_button {
+		margin: 2vh 4% 2vh;
+		background: transparent;
+		border: none;
+		border-radius: 0.9vw;
+		color: #ff3b30;
+		font-size: 0.95vw;
+		font-weight: 500;
+
+		&:hover {
+			background: rgba(255, 59, 48, 0.1);
+		}
+
+		.phone_button-icon--check {
+			display: none;
+		}
+	}
+}

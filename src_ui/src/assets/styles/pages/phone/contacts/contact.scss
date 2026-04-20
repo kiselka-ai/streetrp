@@ -1,0 +1,144 @@
+// iPhone 15 Pro Max — Карточка контакта (аватар, действия, инфо, блокировка)
+
+.contacts_contact {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	padding-top: 6vh;
+	background: #0d0d0f;
+
+	&-header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 2vh 4% 3vh;
+		text-align: center;
+
+		.avatar {
+			width: 10vw;
+			height: 10vw;
+			margin: 0 auto 1.5vh;
+			background: #3a3a3c;
+			border-radius: 50%;
+			font-size: 2.8vw;
+			font-weight: 500;
+			line-height: 2.6;
+			text-align: center;
+			color: #ffffff;
+		}
+
+		.name {
+			margin: 0 0 2vh;
+			font-size: 1.35vw;
+			font-weight: 600;
+			color: #ffffff;
+			letter-spacing: -0.02em;
+		}
+
+		.controls {
+			display: flex;
+			justify-content: center;
+			gap: 4vw;
+			width: 100%;
+			max-width: 85%;
+
+			&_item {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 0.5vh;
+				padding: 0;
+				background: transparent;
+				border: none;
+				cursor: pointer;
+				font-family: inherit;
+				color: #0a84ff;
+				transition: opacity 0.15s ease;
+
+				&:active {
+					opacity: 0.6;
+				}
+
+				&-label {
+					font-size: 0.75vw;
+					font-weight: 500;
+				}
+
+				.icon {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 3.2vw;
+					height: 3.2vw;
+					background: #0a84ff;
+					border-radius: 50%;
+					box-shadow: 0 0.1vw 0.4vw rgba(10, 132, 255, 0.3);
+
+					svg {
+						width: 1.5vw;
+						height: 1.5vw;
+						fill: #ffffff;
+					}
+				}
+
+				&:hover .icon {
+					filter: brightness(1.1);
+				}
+			}
+		}
+	}
+
+	&-info {
+		flex: 1;
+		padding: 0 4% 2vh;
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		li {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			min-height: 4.4vh;
+			padding: 0 4%;
+			background: #2c2c2e;
+			border-radius: 0.9vw;
+			box-shadow: 0 0.1vw 0.3vw rgba(0, 0, 0, 0.2);
+		}
+
+		h4 {
+			margin: 0;
+			font-size: 0.9vw;
+			font-weight: 400;
+			color: #8e8e93;
+			text-transform: none;
+		}
+
+		p {
+			margin: 0;
+			font-size: 0.95vw;
+			color: #0a84ff;
+		}
+	}
+
+	.phone_button {
+		margin: 2vh 4% 2vh;
+		background: #2c2c2e;
+		border: none;
+		border-radius: 0.9vw;
+		color: #ff3b30;
+		font-size: 0.95vw;
+		font-weight: 500;
+
+		&:hover {
+			background: rgba(255, 59, 48, 0.15);
+		}
+
+		.phone_button-icon--check {
+			display: none;
+		}
+	}
+}

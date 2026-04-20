@@ -1,0 +1,13 @@
+import './bank';
+import './barbershop';
+import './clothing-shop';
+import './gas';
+import './licenses';
+import './lsc';
+import './passport';
+import './supermarket';
+import './surgeon';
+import './tattoo-shop';
+import './vehicle-dump';
+import './vehicle-shop';
+import './weapons';

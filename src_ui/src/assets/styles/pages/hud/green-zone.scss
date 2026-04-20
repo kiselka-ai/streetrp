@@ -1,0 +1,46 @@
+.hud_date-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 0.8vw;
+	padding-left: 0.5%;
+	margin-bottom: 0.5%;
+}
+
+.hud_green-zone {
+	display: flex;
+	align-items: center;
+	gap: 0.3vw;
+	padding: 0.2vw 0.4vw;
+	margin-bottom: 0.3vw;
+	background: transparent;
+	border: none;
+	border-radius: 0.3vw;
+	animation: fadeIn 0.3s ease;
+	white-space: nowrap;
+
+	&-icon {
+		font-size: 0.7vw;
+		line-height: 1;
+		filter: drop-shadow(0 0 0.2vw rgba(60, 232, 69, 0.8));
+	}
+
+	&-text {
+		font-size: 0.75vw;
+		font-weight: 700;
+		color: #3ce845;
+		text-shadow: 0.05vw 0.05vw 0.15vw rgba(0, 0, 0, 0.7), 0 0 0.3vw rgba(60, 232, 69, 0.5);
+		text-transform: uppercase;
+		letter-spacing: 0.03vw;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-0.2vw);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

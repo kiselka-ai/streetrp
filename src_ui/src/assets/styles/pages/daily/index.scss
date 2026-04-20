@@ -1,0 +1,99 @@
+@import './bonus';
+@import './stats';
+@import './tasks';
+@import './tabs';
+
+.daily {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 1000;
+
+	&_container-wrapper {
+		position: relative;
+		width: 1280px;
+		height: 720px;
+		max-width: 90vw;
+		max-height: 90vh;
+		padding: 2vw;
+		background: url(~assets/images/daily_bg.jpg) center no-repeat;
+		background-size: cover;
+		border-radius: 0.5vw;
+		border: 0.2vh solid rgba(180, 30, 130, 0.5);
+		box-shadow: 0 0 3vw rgba(180, 30, 130, 0.3);
+		display: flex;
+		flex-direction: column;
+		box-sizing: border-box;
+	}
+
+	&_wrapper {
+		display: flex;
+		flex-direction: row;
+		gap: 2vw;
+		flex: 1;
+		min-height: 0;
+		height: 100%;
+	}
+
+	&_container {
+		flex: 1;
+		overflow-y: auto;
+		margin-bottom: 1%;
+		min-height: 0;
+	}
+
+	&_content {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		min-width: 0;
+		height: 100%;
+	}
+
+	&_username {
+		position: absolute;
+		top: 1.5vw;
+		right: 2vw;
+		margin: 0;
+		font-size: 1.4vw;
+		font-weight: 200;
+		text-transform: uppercase;
+		letter-spacing: 0.1vw;
+		color: $white;
+		z-index: 10;
+	}
+}
+
+@media (max-width: 1024px) {
+	.daily {
+		&_container-wrapper {
+			padding: 3% 2%;
+		}
+
+		&_wrapper {
+			flex-direction: column;
+			gap: 1.5vw;
+		}
+
+		&_tabs {
+			width: 100%;
+			min-width: auto;
+			flex-direction: row;
+			flex-wrap: wrap;
+			padding-right: 0;
+			padding-bottom: 1vw;
+			border-right: none;
+			border-bottom: 0.1vh solid rgba(255, 255, 255, 0.2);
+		}
+
+		&_container {
+			margin-bottom: 6%;
+		}
+	}
+}

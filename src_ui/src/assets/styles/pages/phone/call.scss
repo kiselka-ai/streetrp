@@ -1,0 +1,177 @@
+// iPhone 15 Pro Max — Входящий / исходящий вызов
+
+#call {
+	&::before {
+		@extend %pseudo;
+
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 0;
+		background: rgba(0, 0, 0, 0.35);
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+		border-radius: inherit;
+	}
+}
+
+.call {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 100%;
+	padding: 8vh 4% 4vh;
+	box-sizing: border-box;
+
+	&_info {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 2vh 0;
+
+		.name {
+			margin: 0 0 0.5vh;
+			font-size: 1.75vw;
+			font-weight: 600;
+			color: #ffffff;
+			letter-spacing: -0.02em;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			max-width: 100%;
+		}
+
+		span {
+			font-size: 0.95vw;
+			font-weight: 400;
+			color: #8e8e93;
+		}
+	}
+
+	&_controls {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 2.5vw;
+		width: 100%;
+		max-width: 90%;
+
+		&-label {
+			display: block;
+			margin-top: 0.5vh;
+			font-size: 0.7vw;
+			font-weight: 400;
+			color: rgba(255, 255, 255, 0.85);
+			text-transform: none;
+		}
+
+		&-item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 0;
+			background: transparent;
+			border: none;
+			cursor: pointer;
+			font-family: inherit;
+			transition: transform 0.1s ease, opacity 0.15s ease;
+
+			&:active {
+				transform: scale(0.92);
+				opacity: 0.9;
+			}
+
+			.icon {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 4.5vw;
+				height: 4.5vw;
+				border-radius: 50%;
+				background: rgba(255, 255, 255, 0.2);
+				box-shadow: 0 0.15vw 0.5vw rgba(0, 0, 0, 0.2);
+
+				svg {
+					width: 2vw;
+					height: 2vw;
+					fill: #ffffff;
+				}
+			}
+		}
+
+		// Вторичные кнопки (Напомнить, Сообщение / Откл. звук, Клавиши, …)
+		&--secondary {
+			margin-bottom: 1vh;
+
+			.call_controls-item .icon {
+				width: 3.5vw;
+				height: 3.5vw;
+				background: rgba(255, 255, 255, 0.15);
+
+				svg {
+					width: 1.6vw;
+					height: 1.6vw;
+				}
+			}
+		}
+
+		// Основные: Ответить / Отклонить (входящий), Отклонить (исходящий)
+		&--primary {
+			gap: 4vw;
+
+			.call_controls-item--accept .icon {
+				background: #34c759;
+				box-shadow: 0 0.2vw 0.6vw rgba(52, 199, 89, 0.4);
+			}
+
+			.call_controls-item--decline .icon {
+				transform: rotate(135deg);
+				background: #ff3b30;
+				box-shadow: 0 0.2vw 0.6vw rgba(255, 59, 48, 0.4);
+			}
+
+			.call_controls-item--decline .icon svg {
+				fill: #ffffff;
+			}
+		}
+	}
+
+	&_incoming {
+		.call_controls--primary {
+			.call_controls-item .icon {
+				width: 5.5vw;
+				height: 5.5vw;
+
+				svg {
+					width: 2.4vw;
+					height: 2.4vw;
+				}
+			}
+		}
+	}
+
+	&_outgoing {
+		.call_controls--primary {
+			.call_controls-item .icon {
+				width: 5.5vw;
+				height: 5.5vw;
+				background: #ff3b30;
+				box-shadow: 0 0.2vw 0.6vw rgba(255, 59, 48, 0.4);
+
+				svg {
+					width: 2.4vw;
+					height: 2.4vw;
+					transform: rotate(135deg);
+				}
+			}
+		}
+	}
+}

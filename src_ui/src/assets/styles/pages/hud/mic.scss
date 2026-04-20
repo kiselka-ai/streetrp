@@ -1,0 +1,19 @@
+.hud_mic {
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin-bottom: 0.5vw;
+	padding-left: 0.5%;
+
+	svg {
+		width: 1.5vw;
+		height: 1.5vw;
+		opacity: 0.7;
+		transition: opacity 0.2s ease;
+		margin-left: 0.5vw;
+	}
+
+	&.active svg {
+		opacity: 1;
+	}
+}

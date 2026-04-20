@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120px" height="120px" viewBox="0 0 120 120" version="1.1">
+	<title>FM Radio</title>
+	<defs>
+		<linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+			<stop stop-color="#FF6B35" offset="0%"/>
+			<stop stop-color="#F7931E" offset="100%"/>
+		</linearGradient>
+		<rect id="path-2" x="0" y="0" width="120" height="120" rx="28"/>
+	</defs>
+	<g id="@2x" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g id="FM">
+			<mask id="mask-3" fill="#fff">
+				<use xlink:href="#path-2"/>
+			</mask>
+			<use id="bg" fill="url(#linearGradient-1)" xlink:href="#path-2"/>
+			<g id="radio-icon" mask="url(#mask-3)">
+				<!--  048>2>;=K -->
+				<circle cx="60" cy="60" r="25" fill="none" stroke="#FFF" stroke-width="3" opacity="0.8"/>
+				<circle cx="60" cy="60" r="18" fill="none" stroke="#FFF" stroke-width="2.5" opacity="0.6"/>
+				<circle cx="60" cy="60" r="11" fill="none" stroke="#FFF" stroke-width="2" opacity="0.4"/>
+				<!-- &5=B@0;L=0O B>G:0 -->
+				<circle cx="60" cy="60" r="5" fill="#FFF"/>
+				<!-- "5:AB FM -->
+				<text x="60" y="85" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFF" text-anchor="middle">FM</text>
+			</g>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,163 @@
+// iPhone 15 Pro Max — Контакты (список, хедер, поиск)
+
+#contacts {
+	.contacts {
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+		padding-top: 6vh;
+		background: #0d0d0f;
+
+		.header {
+			flex-shrink: 0;
+			padding: 0 4% 1.5vh;
+		}
+
+		.phone_title {
+			margin: 0 0 1.5vh;
+			font-size: 1.6vw;
+			font-weight: 600;
+			color: #ffffff;
+			letter-spacing: -0.02em;
+		}
+
+		.avatar {
+			margin: 0 auto;
+			margin-bottom: 2%;
+			width: 4vw;
+			height: 4vw;
+			background: #3a3a3c;
+			border-radius: 50%;
+			font-size: 1.2vw;
+			font-weight: 500;
+			line-height: 2.1;
+			text-align: center;
+			color: #ffffff;
+
+			svg {
+				width: 2.2vw;
+				height: 2.2vw;
+				fill: #8e8e93;
+			}
+		}
+
+		.phone_search {
+			border-radius: 0.8vw;
+			background: #2c2c2e;
+			overflow: hidden;
+
+			input {
+				background: #2c2c2e;
+				color: #ffffff;
+				font-size: 0.95vw;
+
+				&::placeholder {
+					color: #8e8e93;
+				}
+			}
+
+			.phone_search-icon,
+			.phone_search-close {
+				fill: #8e8e93;
+			}
+		}
+
+		&_list {
+			flex: 1;
+			padding: 0 4% 2vh;
+			overflow-y: auto;
+			-webkit-overflow-scrolling: touch;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+
+			&--empty {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			&-empty {
+				margin: 0;
+				font-size: 0.95vw;
+				font-weight: 400;
+				color: #8e8e93;
+			}
+
+			&-section {
+				margin-bottom: 1.5vh;
+			}
+
+			&-letter {
+				padding: 0.4vh 4% 0.3vh;
+				font-size: 0.85vw;
+				font-weight: 600;
+				color: #8e8e93;
+				letter-spacing: 0.02em;
+			}
+
+			&-group {
+				background: #2c2c2e;
+				border-radius: 0.9vw;
+				overflow: hidden;
+				box-shadow: 0 0.1vw 0.3vw rgba(0, 0, 0, 0.2);
+			}
+
+			&-item {
+				display: flex;
+				align-items: center;
+				width: 100%;
+				min-height: 4.8vh;
+				padding: 0 4%;
+				background: transparent;
+				border: none;
+				border-bottom: 0.05vh solid #38383a;
+				cursor: pointer;
+				transition: background 0.15s ease;
+				text-align: left;
+				font-family: inherit;
+
+				&:last-child {
+					border-bottom: none;
+				}
+
+				&:active {
+					background: rgba(255, 255, 255, 0.06);
+				}
+			}
+
+			&-avatar {
+				flex-shrink: 0;
+				width: 2.8vw;
+				height: 2.8vw;
+				margin-right: 3%;
+				background: #3a3a3c;
+				border-radius: 50%;
+				font-size: 0.75vw;
+				font-weight: 500;
+				line-height: 2.8;
+				text-align: center;
+				color: #ffffff;
+			}
+
+			&-name {
+				flex: 1;
+				font-size: 0.95vw;
+				font-weight: 400;
+				color: #ffffff;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+
+			&-chevron {
+				flex-shrink: 0;
+				width: 1vw;
+				height: 1vw;
+				fill: #8e8e93;
+				opacity: 0.6;
+			}
+		}
+	}
+}

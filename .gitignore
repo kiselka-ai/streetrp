@@ -1,0 +1,97 @@
+## System and generated files
+.idea
+.DS_Store
+Thumbs.db
+.vscode/
+
+## Directories
+log/
+logs/
+node_modules/
+bin/
+obj/
+
+## Files
+package-lock.json
+yarn.lock
+
+# rage mp
+.listcache
+client_packages/game_resources/dlcpacks
+ragemp-server.exe
+BugTrap-x64.dll
+
+# build files
+client_packages/cef
+client_packages/index.js
+packages/server/index.js
+packages/server/index.js.map
+
+# Runtime и базы данных
+dotnet/
+mongosh-2.6.0-win32-x64/
+
+# Конфигурации и секреты
+.env
+.env.local
+.env.production
+conf.json
+database.sql
+streetrp.sql
+
+# TypeScript
+*.tsbuildinfo
+
+# Логи
+*.log
+
+# Временные файлы
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Build artifacts
+*.dll
+*.exe
+*.pdb
+
+# Архивы
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# NPM
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# TypeScript cache
+.tsbuildinfo
+
+# Если используешь C# (.NET)
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
